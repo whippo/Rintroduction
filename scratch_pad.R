@@ -59,3 +59,54 @@ t.test(height ~ sex, data = height_data)
 bromeliad_data <- read_csv("WorkshopData/bromeliads.csv")
 plot(mosquitoes ~ max.vol, data = bromeliad_data)
 t.test(mosquitoes ~ species, data = bromeliad_data)
+
+bromeliad_aov <- aov(bromeliad_data$mosquitoes ~ bromeliad_data$location)
+summary(bromeliad_aov)
+
+boxplot(mosquitoes ~ location, data = bromeliad_data)
+
+ggplot(bromeliad_data, aes(x = location, y = mosquitoes)) +
+         geom_boxplot()
+
+install.packages('viridis')
+library(viridis)
+
+ggplot(bromeliad_data, 
+       aes(x = location, y = mosquitoes, fill = location)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE) 
+
+ggplot(bromeliad_data, 
+       aes(x = location, y = mosquitoes, fill = location)) +
+  geom_boxplot() +
+  theme_classic() +
+  scale_fill_viridis(discrete = TRUE, begin = 0.3, end = 1, option = "D") +
+  labs(x = "Site", y = "Mosquito Abundance")
+
+ggplot(bromeliad_data, 
+       aes(x = location, y = mosquitoes, fill = location)) +
+  geom_boxplot() +
+  theme_classic() +
+  theme(legend.position = "none") +
+  scale_fill_viridis(discrete = TRUE, 
+                     begin = 0.3, end = 1, 
+                     option = "D") +
+  labs(x = "Site", y = "Mosquito Abundance") 
+
+# DPLYR AND TIDYR
+
+trout_data <- read_csv("WorkshopData/trout.csv")
+
+str(trout_data)
+
+trout_rainbow <- trout_data %>%
+  filter(species == "rainbow")
+
+trout_length_spp <- trout_data %>%
+  select(length, species)
+
+trout_log_length <- trout_data %>%
+  mutate(log10(length))
+
+write_csv(trout_log_length, "WorkshopData/trout_data_mutated.csv")
+
