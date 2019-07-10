@@ -1,0 +1,61 @@
+x_values <- c(1:10)
+y_values <- x_values^2
+plot(x_values, y_values)
+help(plot)
+plot(x_values, y_values, col = "red", type = "l", lty = 3, lwd = 3)
+install.packages("tidyverse")
+library(tidyverse)
+
+?tibble
+?plot
+
+x_and_y <- tibble(x_values, y_values)
+my.function <- function(X) {
+  sqrt(X) + 2
+}
+my.function(9)
+my.function(x_values)
+library(styler)
+install.packages("styler")
+install.packages("styler")
+library(lintr)
+?style_text()
+remotes::install_github("r-lib/styler")
+install.packages("remotes")
+
+simulated_norm <- rnorm(n = 10, mean = 8, sd = 3)
+set.seed(28)
+rnorm(n = 10, mean = 8, sd = 3)
+
+simulated_norm
+
+my_norm_1 <- rnorm(n = 20, mean = 15, sd = 3)
+my_norm_2 <- rnorm(n = 15, mean = 9, sd = 2)
+
+t.test(my_norm_1, my_norm_2)
+library(tidyverse)
+
+scorpion_data <- read_csv("WorkshopData/scorpion_lengths.csv")
+str(scorpion_data)
+is_tibble(scorpion_data)
+
+scorpion_data$bedroom
+mean(scorpion_data$bedroom)
+
+attach(scorpion_data)
+t.test(kitchen, bedroom)
+detach(scorpion_data)
+
+daphnia_data <- read_csv("WorkshopData/daphnia.csv")
+attach(daphnia_data)
+t.test(summer, winter)
+t.test(summer, winter, paired = TRUE)
+detach(daphnia_data)
+
+height_data <- read_csv("WorkshopData/heights.csv")
+
+t.test(height ~ sex, data = height_data)
+
+bromeliad_data <- read_csv("WorkshopData/bromeliads.csv")
+plot(mosquitoes ~ max.vol, data = bromeliad_data)
+t.test(mosquitoes ~ species, data = bromeliad_data)
