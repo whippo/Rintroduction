@@ -41,10 +41,19 @@ is_tibble(scorpion_data)
 
 scorpion_data$bedroom
 mean(scorpion_data$bedroom)
+#INTRO PIPES
+scorpion_data %>%
+  summarise(mean(bedroom)) 
+
+
+
+options(pillar.sigfig = 4)
+
 
 attach(scorpion_data)
 t.test(kitchen, bedroom)
 detach(scorpion_data)
+
 
 daphnia_data <- read_csv("WorkshopData/daphnia.csv")
 attach(daphnia_data)
@@ -98,6 +107,7 @@ ggplot(bromeliad_data,
 trout_data <- read_csv("WorkshopData/trout.csv")
 
 str(trout_data)
+glimpse(trout_data)
 
 trout_rainbow <- trout_data %>%
   filter(species == "rainbow")
@@ -107,6 +117,18 @@ trout_length_spp <- trout_data %>%
 
 trout_log_length <- trout_data %>%
   mutate(log10(length))
+
+trout_log_mayfly <- trout_data %>%
+  filter(stream == "mayfly") %>%
+  mutate(log10(length)) 
+
+trout_log_mayfly %>%
+  summarise(mean(log10(length)))
+
+trout_data %>%
+  filter(stream == "mayfly") %>%
+  mutate(log10(length))%>%
+  summarise(mean(log10(length)))
 
 write_csv(trout_log_length, "WorkshopData/trout_data_mutated.csv")
 
