@@ -1,24 +1,23 @@
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#                                                                                ##
-# New R Workshop Script                                                          ##
-# Data are current as of 2022-02-15                                              ##
-# Data source: Ross Whippo/Edd Hamilton                                          ##
-# R code prepared by Ross Whippo                                                 ##
-# Last updated 2022-02-15                                                        ##
-#                                                                                ##
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#                                                                             ##
+# New R Workshop Script                                                       ##
+# Script created 2019-07-25                                                   ##
+# Data source: Ross Whippo/Edd Hamilton                                       ##
+# R code prepared by Ross Whippo                                              ##
+# Last updated 2023-09-21                                                     ##
+#                                                                             ##
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # SUMMARY:
 
-# Script used for demonstration purposes at the R Introduction Workshop adapted from 
-# REU Workshop 2019.
+# Script used for demonstration purposes at the R Introduction Workshop adapted 
+# from REU Workshop 2019.
 # A few take-homes that aren't in the script below:
 
 # KEEP YOUR DATA TIDY! use https://style.tidyverse.org/ as a guide on how to make
 # and maintain clean code.
 
-# Use version control! We didn't have a chance to get into version control (which
-# would be a workshop all on its own), but read up on it and avail yourselves of
+# Use version control! Read up on it and avail yourselves of
 # version control tools. I use the version control software 'Git' which is utilized
 # by the online platform 'Github' (think of it as Dropbox for coders.) R Studio
 # is compatible with Git and can be accessed through the 'Project' drop down
@@ -40,27 +39,28 @@
 # TO DO:
 # NA
 
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# TABLE OF CONTENTS                                                            ####
-#                                                                                 +
-# RECENT CHANGES TO SCRIPT                                                        +
-# LOAD PACKAGES                                                                   +
-# READ IN AND PREPARE DATA                                                        +
-# MANIPULATE AND ANALYZE DATA                                                     +
-#                                                                                 +
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# TABLE OF CONTENTS                                                         ####
+#                                                                              +
+# RECENT CHANGES TO SCRIPT                                                     +
+# LOAD PACKAGES                                                                +
+# READ IN AND PREPARE DATA                                                     +
+# MANIPULATE AND ANALYZE DATA                                                  +
+#                                                                              +
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# RECENT CHANGES TO SCRIPT                                                     ####
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# RECENT CHANGES TO SCRIPT                                                  ####
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # 2019-07-25 Script created for R Workshop
 # 2019-07-26 Further annotation and formatting for distribution to students.
 # 2022-02-15 adapted to new workshop
+# 2023-09-21 Script tidied for use w/ Semester by the Sea Intern workshop
 
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# LOAD PACKAGES                                                                ####
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# LOAD PACKAGES                                                             ####
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # load the packages that you will need to do the analyses.
 library(dplyr) # manipulates data
@@ -70,16 +70,16 @@ library(ggplot2) # data visualization
 library(viridis) # color palette for color blind
 library(ggpubr) # layout scheme for multiple plots
 
-# set your working directory (I forgot to mention this in the workshop!)
+# set your working directory 
 # make sure this script is saved in the folder that contains the data you want to
 # use. Go to the menu above, select Session > Set Working Directory > To Source 
 # File Location. Copy and past the command that appears in the console to the space
 # below. It should begin with: setwd(etc..........)
 # setwd()
 
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# READ IN AND PREPARE DATA                                                     ####
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# READ IN AND PREPARE DATA                                                  ####
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # create data in the R environment
 
@@ -142,9 +142,9 @@ bromeliads <- read_csv("WorkshopData/bromeliads.csv")
 # import trout data
 trout <- read_csv("WorkshopData/trout.csv")
 
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# MANIPULATE AND ANALYZE DATA                                                  ####
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# MANIPULATE AND ANALYZE DATA                                               ####
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # t-test for differences between simulated data. Do the vectors have a statistically
 # significant difference in their mean?
