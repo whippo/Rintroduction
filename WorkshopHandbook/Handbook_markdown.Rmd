@@ -492,7 +492,7 @@ get R to bring in data frames. It happens to everyone, normally when
 someone's watching you type. Don't worry, just work through it slowly,
 check the command and file path syntax, and it will all fall into place.
 
-### Before/after data and paired t-tests 
+### Before/after data and paired t-tests
 
 A wonderful feature of t-tests is their ability to deal with paired
 data, for example looking at before/after the application of a

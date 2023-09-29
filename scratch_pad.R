@@ -132,3 +132,47 @@ trout_data %>%
 
 write_csv(trout_log_length, "WorkshopData/trout_data_mutated.csv")
 
+4*5
+x.values <- c(1,2,3,4,5,6,7,8,9,10)
+x.values
+
+scorpion_long <- scorpion.data %>%
+  pivot_longer(everything()) %>%
+  rename(location = name, length = value)
+
+xy_long <- x.and.y %>%
+  pivot_longer(everything()) 
+
+xy_long %>%
+  group_by(name) %>%
+  summarise(mean(value), sd(value))
+
+xy_long %>%
+  t.test(value ~ name, data = .)
+
+
+
+
+
+
+
+
+
+
+scorpion.data$
+
+mean()
+sd()
+length()
+
+
+
+
+
+
+
+
+
+
+
+
