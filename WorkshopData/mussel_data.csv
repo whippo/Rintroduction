@@ -1,4 +1,4 @@
-mussel_ID,polygon_ID,quadrat,site,position_percent,tidal_height_ft,substrate,slope_cm_m,length_mm
+mussel_ID,polygon_ID,quadrat,site,position_percent,tidal_height_ft,substrate,slope_m_m,length_mm
 00001,17007,1,1,10,4.74,pebble_granule,0.2833184024,43.78
 00002,17007,1,1,10,4.74,pebble_granule,0.2833184024,42.06
 00003,17007,1,1,10,4.74,pebble_granule,0.2833184024,44.27

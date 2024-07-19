@@ -55,6 +55,8 @@ mussel_data <- read_csv("WorkshopData/mussel_data.csv",
                                          site = col_character())) 
 # look at summary of data structure
 str(mussel_data)
+glimpse(mussel_data)
+head(mussel_data)
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # EXPLORATORY SUMMARY FIGURES                                                  ####
@@ -111,8 +113,7 @@ ggplot(mussel_data, aes(x = quadrat,
   stat_count() +
   theme_bw() +
   scale_fill_viridis(discrete = TRUE,
-                     option = "C")
-
+                     option = "C") 
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # DATA MANIPULATION & VISUALIZATION                                            ####
@@ -136,6 +137,21 @@ ggplot(mussel_data, aes(x = site,
   theme_bw() +
   scale_fill_viridis(discrete = TRUE,
                      option = "C")
+
+# liters filtered per hour per quadrat
+ggplot(mussel_data, aes(x = quadrat,
+                        y = filtration_l_hr,
+                        fill = site)) +
+  geom_boxplot() +
+  theme_bw() +
+  scale_fill_viridis("Site", 
+                     labels = c("One",
+                                "Two",
+                                "Three",
+                                "Four"),
+                     discrete = TRUE,
+                     option = "C") +
+  labs(x = "Quadrat", y = "Filtration Rate L/hr") 
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # SPATIAL ANALYSIS                                                             ####
