@@ -177,6 +177,7 @@ jako <- terra::vect("C:/Users/Ross.Whippo/Desktop/Jakolof_Bay_poly.kml")
 
 # check if the coordinate reference system (crs) matches the tidelands data
 crs(jako)
+crs(tidelands)
 
 # extract the tidelands crs
 newcrs <- crs(tidelands)
