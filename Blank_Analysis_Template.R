@@ -1,10 +1,10 @@
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #                                                                                ##
-# TITLE                                                                          ##
-# Data are current as of yyyy-mm-dd                                              ##
-# Data source: NAME/ORG                                                          ##
-# R code prepared by NAME                                                        ##
-# Last updated yyyy-mm-dd                                                        ##
+# KBay Wrack Analyses                                                            ##
+# Data are current as of 2024-10-17                                              ##
+# Data source: Ross Whippo/NOAA Edwin Viramontes SBB                             ##
+# R code prepared by Ross Whippo                                                 ##  
+# Last updated 2024-10-17                                                        ##
 #                                                                                ##
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,7 +12,7 @@
 
 
 # Required Files (check that script is loading latest version):
-# FILE.csv
+# wrackData.csv
 
 # Associated Scripts:
 # FILE.R
@@ -38,10 +38,13 @@
 # LOAD PACKAGES                                                                ####
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+library(tidyverse)
+library(viridis)
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # READ IN AND PREPARE DATA                                                     ####
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

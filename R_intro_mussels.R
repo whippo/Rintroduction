@@ -38,6 +38,8 @@
 # LOAD PACKAGES & PREPARE WORKSPACE                                            ####
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+# install.packages("tidyverse")
+# install.packages("viridis")
 # clear any existing data in the environment
 rm(list = ls())
 
@@ -47,6 +49,13 @@ library(viridis) # viridis is a color-blind friendly palette for graphs
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # READ IN AND PREPARE DATA                                                     ####
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+anem_abund <- read_csv("WorkshopData/anem_abund.csv")
+
+view(anem_abund) # brings up dataset
+str(anem_abund)
+head(anem_abund)
+tail(anem_abund)
 
 # command to read in data to R
 mussel_data <- read_csv("WorkshopData/mussel_data.csv", 
