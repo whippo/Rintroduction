@@ -239,7 +239,7 @@ deg2rad <- function(deg) {(deg * pi) / (180)}
 # Multiplier * Footprint Area = estimated slope area
 
 # averaging high_slope, highmediu0, lowmedium0, low_slope and calculating estimated areas
-jako_df <- jako_df %>%
+jako_df <- jako_df %>% 
   mutate(temp = str_extract(high_slope, "[0-9]-[0-9]*")) %>%
   mutate(temp = replace_na(temp, "60")) %>%
   separate_wider_delim(temp, "-", names = c("low", "high"), too_few = "align_start") %>%
